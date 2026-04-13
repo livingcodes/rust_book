@@ -1,8 +1,32 @@
+// can't mod ref, unless mut
+// if mut ref, then no other refs
+// ref scope begins on when introduced and ends after last usage
 fn main() {
+  let mut s = String::from("hello");
+  let r1 = &s;
+  let r2 = &s;
+  println!("{r1} and {r2}");
+
+  let r3 = &mut s;
+  println!("{r3}");
+}
+
+/* fn main() {
+  let s1 = String::from("hello");
+  let len = calc_len(&s1);
+  println!("Length of {s1} is {len}");
+}
+
+// use ref instead of taking ownership
+fn calc_len(s: &String) -> usize {
+  s.len();
+} */
+
+/* fn main() {
   let x = String::from("hello");
   //let y = x; // will cause compile-time error
   println!("{x}");
-}
+} */
 
 /* fn main() {
   let mut x = String::from("hello");
