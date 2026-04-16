@@ -1,17 +1,14 @@
 fn main() {
   let s = String::from("hello world");
-  let hello = &s[0..5];
-  let world = &s[6..11];
-  println!("{hello} {world}");
+  let word = first_word(&s);
+  println!("the first word is {}", word);
+}
 
-  let x = String::from("hello");
-  let lo = &x[3..];
-  println!("{lo}");
-
-  let len = x.len();
-  let lo = &x[3..len];
-  println!("{lo} {len}");
-
-  let lo = &x[3..5];
-  println!("{lo}");
+fn first_word(s :&String) -> &str {
+  for (i, &ch) in s.as_bytes().iter().enumerate() {
+    if ch == b' ' {
+      return &s[..i];
+    }
+  }
+  return &s[..];
 }
