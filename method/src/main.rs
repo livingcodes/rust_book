@@ -7,6 +7,18 @@ fn main() {
 
   // associated function
   println!("square area:{}", Rect::square(30).area());
+
+  route(Ip::V4);
+}
+
+enum Ip { V4, V6 }
+
+fn route(ip:Ip) {
+  let num = match ip {
+    Ip::V4 => 4,
+    Ip::V6 => 6
+  };
+  println!("v{}", num);
 }
 
 struct Rect {
