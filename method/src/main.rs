@@ -3,7 +3,10 @@ fn main() {
     width: 30,
     height: 50
   };
-  println!("area:{}", rect.area());
+  println!("rect area:{}", rect.area());
+
+  // associated function
+  println!("square area:{}", Rect::square(30).area());
 }
 
 struct Rect {
@@ -12,6 +15,13 @@ struct Rect {
 }
 
 impl Rect {
+  fn square(len:u32) -> Rect {
+    Rect {
+      width:len,
+      height:len
+    }
+  }
+
   fn area(&self) -> u32 {
     self.width * self.height
   }
