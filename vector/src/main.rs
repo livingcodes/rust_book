@@ -6,4 +6,7 @@ fn main() {
 
   let v2 = vec![1, 2, 3];
   println!("hello count:{}", v2.len());
+
+  let &second = &v2[1];
+  println!("second ref:{}", second);
 }
