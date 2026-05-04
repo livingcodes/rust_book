@@ -33,4 +33,10 @@ fn main() {
   //let s3 = s1 + " " + s2; // err
   let s3 = s1 + " " + &s2;
   println!("{s3}");
+
+  let a = String::from("tic");
+  let b = String::from("tac");
+  let c = String::from("toe");
+  let d = format!("{a}-{b}-{c}");
+  println!("{d}");
 }
