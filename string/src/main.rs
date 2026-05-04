@@ -27,4 +27,10 @@ fn main() {
 
   lol.push_str(" mr");
   println!("{lol}");
+
+  let s1 = String::from("hello");
+  let s2 = String::from("world");
+  //let s3 = s1 + " " + s2; // err
+  let s3 = s1 + " " + &s2;
+  println!("{s3}");
 }
