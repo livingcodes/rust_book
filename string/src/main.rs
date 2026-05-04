@@ -19,4 +19,12 @@ fn main() {
   // Strings are UTF-8 encoded, so they can contain non-ASCII characters
   let translation = "Здра".to_string();
   println!("{translation}");
+
+  // push char
+  let mut lol = String::from("lo");
+  lol.push('l');
+  println!("{lol}");
+
+  lol.push_str(" mr");
+  println!("{lol}");
 }
