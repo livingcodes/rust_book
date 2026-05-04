@@ -10,4 +10,9 @@ fn main() {
   //let msg = hello + " " + world;
 
   println!("{msg}");
+
+  // push_str
+  let mut name = String::from("John");
+  name.push_str(" Smith");
+  println!("{name}");
 }
