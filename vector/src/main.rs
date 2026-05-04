@@ -9,4 +9,21 @@ fn main() {
 
   let &second = &v2[1];
   println!("second ref:{}", second);
+
+  let vget = v2.get(100);
+  println!("vget: {:?}", vget); // Option None
+
+  // let panic = &v2[100]; // at runtime
+  // println!("panic:{}", panic);
+
+  let v3 = vec![1, 2, 3];
+  for i in &v3 {
+    println!("{i}");
+  }
+
+  let mut v4 = vec![1, 2, 3];
+  for i in &mut v4 {
+    *i += 50;
+    println!("{i}");
+  }
 }
