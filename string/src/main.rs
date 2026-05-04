@@ -39,4 +39,9 @@ fn main() {
   let c = String::from("toe");
   let d = format!("{a}-{b}-{c}");
   println!("{d}");
+
+  // iterating over chars
+  for c in "Зд".chars() {
+    println!("{c}");
+  }
 }
